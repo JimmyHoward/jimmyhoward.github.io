@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">title</h1>
+    <p id="description">this is a form</p>
+    <form action="post" id="survey-form">
+
+        <label for="name" id="name-label">name</label>
+        <input type="text" name="name" id="name" placeholder="name">
+        <label for="email" id="email-label">email</label>
+        <input type="email" name="email" id="email" placeholder="email">
+        <label for="number" id="number-label">number</label>
+        <input type="number" name="number" id="number" placeholder="number">
+
+        <select name="choices" id="dropdown">
+            <option value="1" id="1">1</option>
+            <option value="2" id="2">2</option>
+            <option value="3" id="3">3</option>
+        </select>
+
+        <input type="radio" name="radio" id="radio" value="a">
+        <input type="radio" name="radio" id="radio" value="b">
+        <input type="radio" name="radio" id="radio" value="c">
+        
+        <input type="checkbox" name="checkbox" id="checkbox" value="yes">
+        <input type="checkbox" name="checkbox" id="checkbox" value="no">
+
+        <textarea></textarea>
+
+        <button id="submit">submit</button>
+
+    </form>
+    
+</body>
+</html>
