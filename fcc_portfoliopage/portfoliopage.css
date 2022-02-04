@@ -1,0 +1,14 @@
+@media (min-width:800px) {
+    body {
+        width: 80vw;
+    }
+}
+
+#welcome-section {
+    height: 100vh;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+}
