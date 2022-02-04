@@ -12,11 +12,11 @@
     <form action="post" id="survey-form">
 
         <label for="name" id="name-label">name</label>
-        <input type="text" name="name" id="name" placeholder="name">
+        <input type="text" name="name" id="name" placeholder="name" required>
         <label for="email" id="email-label">email</label>
-        <input type="email" name="email" id="email" placeholder="email">
+        <input type="email" name="email" id="email" placeholder="email" required>
         <label for="number" id="number-label">number</label>
-        <input type="number" name="number" id="number" placeholder="number">
+        <input type="number" name="number" id="number" placeholder="number" min="10" max="100">
 
         <select name="choices" id="dropdown">
             <option value="1" id="1">1</option>
