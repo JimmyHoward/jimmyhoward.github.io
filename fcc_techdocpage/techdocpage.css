@@ -1,1 +1,20 @@
-techdocpage.css
+
+
+@media (max-width: 600px) {
+    img {
+      width: 80%;
+    }
+  }
+  
+  img {
+    display: flex;
+  }
+  
+  @media (min-width: 800px) {
+      #navbar {
+          display: block;
+          position: fixed;
+          left: 0;
+          top: 0;
+      }
+  }
