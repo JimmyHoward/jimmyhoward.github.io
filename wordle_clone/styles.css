@@ -70,3 +70,28 @@ body {
     --saturation: 29%;
     --lightness: 43%
 }
+
+.guess-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    grid-template-columns: repeat(5, 4rem);
+    grid-template-rows: repeat(6, 4rem);
+    gap: .25rem;
+    margin-bottom: 1em;
+}
+
+.tile {
+    font-size: 2rem;
+    background-color: red;
+    color: white;
+    /* border: 0.05rem solid hsl(240, 2%, 23%);
+    font-weight: bold;
+    text-transform: uppercase;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* min-height: 3rem; */
+}
