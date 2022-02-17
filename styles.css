@@ -1,172 +1,126 @@
-* {
-    /* border: 1px solid red; */
-    font-family: "Avenir"
+*,
+*::before,
+*::after {
+    
+    border: 1px solid red;
+    box-sizing: border-box;
 }
+
+:root {
+    --ff-primary: 'Raleway', sans-serif;
+    --ff-secondary: 'Arial', sans-serif;
+
+    --fw-light: 200;
+    --fw-reg: 400;
+    --fw-bold: 600;
+
+    --clr-light: #fff;
+    --clr-dark: #111;
+    --clr-accent: #345;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General Styles */
 
 body {
-    display: flex;
-    flex-direction: column;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong {font-weight: var(--fw-bold)}
+
+section {
+    padding: 5em 2em;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
     margin: 0;
 }
 
+h1 {font-size: var(--fs-h1)}
+h2 {font-size: var(--fs-h2)}
+h3 {font-size: var(--fs-h3)}
 
-/* Header */
-header {
-    background-color: #1f2937;
-    color: #f9faf8;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: white 2px solid;
+.section__title {
+    margin-bottom: .25em;
 }
 
-header nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.header-element a {
-    color: #f9faf8;
-    text-decoration: none;
-    margin: 0 20px;
+.section__title__intro {
+    font-weight: var(--fw-reg);
 }
 
-.header-logo {
-    display: flex;
-}
-.header-logo img {
-    /* flex: 1 1 50px; */
-    max-height: 50px;
-    
+.section__title_intro strong {
+    display: block;
 }
 
-/* Hero Banner */
-.hero {
-    color: #f9faf8;
-    background-color: #1f2937;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+.section__subtitle {
+    margin:0;
+    font-size: var(--fs-h3);
 }
 
-
-
-.hero-image {
-    flex: 1 1 50%;
-    max-width: 400px;
-    height: auto;
+.section__subtitle__intro,
+.section__subtitle__about {
+    background: var(--clr-accent);
+    font-family: var(--ff-primary);
 }
 
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 20px;
-    max-width: 500px;
-    margin-bottom: 10px;
+/* header */
+
+nav {
+    display: none;
 }
 
+/* intro section */
 
-
-.hero-text button {
-    align-self: flex-start;
+.intro {
+    position: relative;
 }
 
-/* Random-info Section */
+@media(min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            'img title'
+            'img subtitle';
+        grid-template-columns: min-content max-content;
+    }
 
-.random-info-items img {
-    min-width: 100px;
-    border: 3px solid #4448a6;
-    border-radius: 3px;
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+    }
+
+    .section__subtitle__intro {
+        align-self: flex-start;
+    }
 }
-
-.random-info-items {
-    display: flex;
-    justify-content: center;
-}
-
-.random-info-items div {
-    display: flex;
-    margin: 0px 20px;
-    /* flex: 1 1 calc(25%-40px); */
-    flex-direction: column;
-    align-items: center;
-}
-.random-info-items div img {
-    max-width: 100px;
-}
-
-.random-info h2 {
-    text-align: center;
-}
-
-/* Quote */ 
-/* .quote {
-    display: flex;
-} */
-.quote {
-    background-color: lightgray;
-}
-
-.quote p {
-    padding:30px 50px;
-}
-
-.quote h3 {
-    float: right;
-    margin-top: -10px;
-    margin-right: 30px;
-}
-
-/* Call to Action */ 
-
-.cta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.cta-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px 20px 30px 20px;
-    margin: 50px 0;
-    background-color: lightskyblue;
-    border-radius: 10px;
-}
-
-.cta-text > * {
-    flex: 1 1 10px;
-    margin: 0;
-    
-    
-}
-
-.cta-text div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Footer */
-.copyright {
-    text-align: center;
-    background-color: #1f2937;
-    color: #f9faf8;
-}
-
-button {
-    background-color: darkcyan;
-    border: 3px white solid;
-    border-radius: 10px;
-    padding: 5px 10px;
-    color: white;
-    height: 40px;
-}
-
-
-
-

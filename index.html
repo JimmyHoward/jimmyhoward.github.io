@@ -1,80 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="styles.css">
-        <title>Landing Page</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Howard's Portfolio Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <body>
-        <header>
-            <div class="header-element header-logo">
-                <img src="header-logo.jpeg" alt="Header Logo">
-            </div>
-            <nav>
-                <div class="header-element">
-                    <a href="#">Header Link One</a>
-                </div>
-                <div class="header-element">
-                    <a href="#">Header Link Two</a>
-                </div>
-                <div class="header-element">
-                    <a href="#">Header Link Three</a>
-                </div>
-            </nav>
-        </header>
 
-        <div class="hero">
-            <img class="hero-image" src="hero.jpeg">
-            <div class="hero-text">
-                <h1>This website is awesome</h1>
-                <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.</p>
-                <button type="button">Sign Up</button>
+    <header>
+        <div class="logo">
+            <img src="logo.img" alt="">
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home">Home</a></li>
+                <li class="nav__item"><a href="#services">My Services</a></li>
+                <li class="nav__item"><a href="#about">About</a></li>
+                <li class="nav__item"><a href="#work">My Work</a></li>
+                <li class="nav__item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- intro -->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title__intro">
+            Hi, I am<strong>Howard</strong>
+            <p class="section__subtitle section__subtitle__intro">front-end-dev</p>
+            <img src="#" alt="a picture of Howard smiling" class='intro-img'>
+        </h1>
+    </section>
+
+    <!-- My services -->
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title__services">What I do</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Physics and Astronomy Olympiad Training</h3>
+                    <p>Ipsum anim nulla ullamco nulla eiusmod. Amet anim proident minim qui tempor magna reprehenderit duis. Minim commodo incididunt magna cupidatat duis mollit ullamco ex sit officia. Aliqua labore anim id sint deserunt labore Lorem.</p>
+                </div>
+                <div class="service">
+                    <h3>Robotics and Arduino Lessons</h3>
+                    <p>Ipsum anim nulla ullamco nulla eiusmod. Amet anim proident minim qui tempor magna reprehenderit duis. Minim commodo incididunt magna cupidatat duis mollit ullamco ex sit officia. Aliqua labore anim id sint deserunt labore Lorem.</p>
+                </div>
+                <div class="service">
+                    <h3>Responsive Website Design</h3>
+                    <p>Ipsum anim nulla ullamco nulla eiusmod. Amet anim proident minim qui tempor magna reprehenderit duis. Minim commodo incididunt magna cupidatat duis mollit ullamco ex sit officia. Aliqua labore anim id sint deserunt labore Lorem.</p>
+                </div>
             </div>
+
+            <a href="#work" class='btn'>My Work</a>
+    </section>
+
+    <!-- about -->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title__about">Who I am</h2>
+        <p class="section__subtitle section__subtitle__about">Laboris commodo et </p>
+
+        <div class="about-me__body">
+            <p>Lorem Lorem ullamco deserunt amet est mollit enim ad voluptate. Minim in nostrud ut duis enim consequat. Ad ea Lorem cupidatat non ex amet id dolor minim reprehenderit sit nisi elit. Ea ea aliquip sit deserunt nulla in qui aute mollit nostrud. Deserunt eiusmod culpa laborum officia quis aute minim qui cupidatat tempor. Ipsum quis ex nulla voluptate aliqua ut veniam in fugiat quis.</p>
+            <p>Lorem Lorem ullamco deserunt amet est mollit enim ad voluptate. Minim in nostrud ut duis enim consequat. Ad ea Lorem cupidatat non ex amet id dolor minim reprehenderit sit nisi elit. Ea ea aliquip sit deserunt nulla in qui aute mollit nostrud. Deserunt eiusmod culpa laborum officia quis aute minim qui cupidatat tempor. Ipsum quis ex nulla voluptate aliqua ut veniam in fugiat quis.</p>
         </div>
 
-        <div class="random-info">
-            <h2>Some Random Information</h2>
-            <div class="random-info-items">
-                <div>
-                    <img src="square-1.jpeg">
-                    <p>This is some subtext under an illustration of an image.</p>
-                </div>
-                <div>
-                    <img src="square-2.jpeg">
-                    <p>This is some subtext under an illustration of an image.</p>
-                </div>
-                <div>
-                    <img src="square-3.jpeg">
-                    <p>This is some subtext under an illustration of an image.</p>
-                </div>
-                <div>
-                    <img src="square-4.jpeg">
-                    <p>This is some subtext under an illustration of an image.</p>
-                </div>
-            </div>
+        <img src="#" alt="">
+    </section>
+
+
+    <!-- work -->
+    <section class="my-work" id="work">
+        <h2 class="section__title">My Work</h2>
+        <p class="section__subtitle"></p>
+        <div class="portfolio">
+            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
         </div>
-
-        <div class="quote">
-            <p><em>This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</em></p>
-            <h3><strong>-John Smith</strong></h3>
-        </div>
-
-        <div class="cta">
-            <div class="cta-text">
-                <div>
-                    <h3>Call to action! It's time!</h3>
-                    <button type="button">Sign Up</button>
-                </div>
-                <p>Sign up for our product by clicking that button right over there!</p>
-            </div>
-        </div>
-
-        <footer class="copyright">
-            <p>Copyright The Odin Project 2021</p>
-        </footer>
-
-    </body>
-    <div class="iuhhi"><input type="text" name="uihhui" id="uihuih"><label for="uihui"></label></div>
-
+    </section>
+    
+    <footer>
+        <a href="email" class="footer__link">efiowjiofj@gmail.com</a>
+        <ul class="social__list">
+            <li class="social__list__item"><a href="#" class="social__list__link">Github</a></li>
+            <li class="social__list__item"><a href="#" class="social__list__link">LinkedIn</a></li>
+            <li class="social__list__item"><a href="#" class="social__list__link">Instagram</a></li>
+            <li class="social__list__item"><a href="#" class="social__list__link">StackExchange</a></li>
+        </ul>
+    </footer>
+</body>
 </html>
+
