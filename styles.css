@@ -2,7 +2,7 @@
 *::before,
 *::after {
     
-    border: 1px solid red;
+    /* border: 1px solid red; */
     box-sizing: border-box;
 }
 
@@ -294,7 +294,7 @@ header {
 
 .my-services {
     background-color: var(--clr-dark);
-    background-image: url(https://media.istockphoto.com/photos/background-of-galaxy-and-stars-picture-id1035676256?k=20&m=1035676256&s=612x612&w=0&h=Dnu8uhnGg1ZgzaEduBnTI-ixFAM-XU-whKQqAsjYnGs=);
+    background-image: url('assets/space-bg.jpg');
     background-size: cover;
     /* background-blend-mode: multiply; */
     color: var(--clr-light);
@@ -347,6 +347,7 @@ header {
 
 .about-me__img {
     box-shadow: var(--bs);
+    border-radius: 5%;
 }
 
 @media(min-width: 600px) {
