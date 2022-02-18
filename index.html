@@ -11,24 +11,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b5360eecbd.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 
     <header>
         <div class="logo">
-            <img src="logo.img" alt="">
+            <img src="/assets/profilepic.jpeg" alt="">
         </div>
         <button class="nav-toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
         </button>
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item"><a href="#home">Home</a></li>
-                <li class="nav__item"><a href="#services">My Services</a></li>
-                <li class="nav__item"><a href="#about">About</a></li>
-                <li class="nav__item"><a href="#work">My Work</a></li>
-                <li class="nav__item"><a href="#contact">Contact</a></li>
+                <li class="nav__item"><a href="#home" class='nav__link'>Home</a></li>
+                <li class="nav__item"><a href="#services" class='nav__link'>My Services</a></li>
+                <li class="nav__item"><a href="#about" class='nav__link'>About</a></li>
+                <li class="nav__item"><a href="#work" class='nav__link'>My Work</a></li>
+                <li class="nav__item"><a href="#contact" class='nav__link'>Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -38,7 +39,7 @@
         <h1 class="section__title section__title__intro">
             Hi, I am <strong>Howard</strong>
             <p class="section__subtitle section__subtitle__intro">front-end-dev</p>
-            <img src="/assets/profilepic.jpeg" alt="a picture of Howard smiling" class='intro-img'>
+            <img src="/assets/profilepic.jpeg" alt="a picture of Howard smiling" class='intro__img'>
         </h1>
     </section>
 
@@ -73,37 +74,40 @@
             <p>Lorem Lorem ullamco deserunt amet est mollit enim ad voluptate. Minim in nostrud ut duis enim consequat. Ad ea Lorem cupidatat non ex amet id dolor minim reprehenderit sit nisi elit. Ea ea aliquip sit deserunt nulla in qui aute mollit nostrud. Deserunt eiusmod culpa laborum officia quis aute minim qui cupidatat tempor. Ipsum quis ex nulla voluptate aliqua ut veniam in fugiat quis.</p>
         </div>
 
-        <img src="#" alt="" class="me-img">
+        <img src="/assets/portfolio site assets.002.jpeg" alt="" class="about-me__img">
     </section>
 
 
     <!-- work -->
     <section class="my-work" id="work">
-        <h2 class="section__title">My Work</h2>
-        <p class="section__subtitle"></p>
+        <h2 class="section__title section__title__work">My Work</h2>
+        <p class="section__subtitle section__subtitle__work"></p>
         <div class="portfolio">
-            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
-            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
-            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
-            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
-            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
-            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
-            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
-            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
-            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
-            <a href="" class="portfolio__item"><img src="" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="/assets/portfolio site assets.003.jpeg" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="/assets/portfolio site assets.004.jpeg" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="/assets/portfolio site assets.005.jpeg" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="/assets/portfolio site assets.006.jpeg" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="/assets/portfolio site assets.007.jpeg" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="/assets/portfolio site assets.008.jpeg" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="/assets/portfolio site assets.009.jpeg" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="/assets/portfolio site assets.010.jpeg" alt="" class="portfolio__img"></a>
+            <a href="" class="portfolio__item"><img src="/assets/portfolio site assets.011.jpeg" alt="" class="portfolio__img"></a>
+            <a href="portfolio-item-12.html" class="portfolio__item"><img src="/assets/portfolio site assets.012.jpeg" alt="" class="portfolio__img"></a>
         </div>
     </section>
     
-    <footer>
+    <footer class='footer'>
         <a href="email" class="footer__link">efiowjiofj@gmail.com</a>
         <ul class="social__list">
-            <li class="social__list__item"><a href="#" class="social__list__link">Github</a></li>
-            <li class="social__list__item"><a href="#" class="social__list__link">LinkedIn</a></li>
-            <li class="social__list__item"><a href="#" class="social__list__link">Instagram</a></li>
-            <li class="social__list__item"><a href="#" class="social__list__link">StackExchange</a></li>
+            <li class="social__list__item"><a href="#" class="social__list__link"><i class="fa-brands fa-github"></i></a></li>
+            <li class="social__list__item"><a href="#" class="social__list__link"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li class="social__list__item"><a href="#" class="social__list__link"><i class="fa-brands fa-instagram"></i></a></li>
+            <li class="social__list__item"><a href="#" class="social__list__link"><i class="fa-solid fa-envelope"></i></a></li>
         </ul>
     </footer>
+
+    <script src="/index.js"></script>
+
 </body>
 </html>
 
