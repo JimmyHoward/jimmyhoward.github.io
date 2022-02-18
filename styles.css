@@ -132,13 +132,14 @@ h3 {font-size: var(--fs-h3)}
 /* header */
 
 .logo {
-    max-width: 150px;
+    max-width: 300px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     padding: 1em;
+    border-bottom: 1px solid var(--clr-dark);
 }
 
 .nav {
@@ -167,7 +168,7 @@ header {
 .nav__link {
     color: inherit;
     font-weight: var(--fw-bold);
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h2);
     text-decoration: none;
 }
 
@@ -194,7 +195,6 @@ header {
 .hamburger::after {
     position: absolute;
     content:'';
-    left: -1px; /* why? */
     right: 0;
 }
 
@@ -226,11 +226,13 @@ header {
 }
 
 .nav-open .hamburger {
+    background-color: var(--clr-accent);
     transform: rotate(.625turn);
 }
 
 .nav-open .hamburger::before {
-    transform: rotate(.25turn) translateX(-7px);
+    background-color: var(--clr-accent);
+    transform: rotate(.25turn) translateX(-6px);
 }
 
 .nav-open .hamburger::after {
@@ -292,6 +294,12 @@ header {
 
 /* my services */
 
+.my-work-btn {
+    box-shadow: var(--bs);
+    font-weight: var(--fw-bold);
+    border-radius: 5px;
+}
+
 .my-services {
     background-color: var(--clr-dark);
     background-image: url('assets/space-bg.jpg');
@@ -303,7 +311,7 @@ header {
 
 .service {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 2em auto;
 }
 
 .services {
@@ -319,10 +327,10 @@ header {
     content: '';
     display: block;
     width: 3em;
-    height: 1px;
+    height: 2px;
     margin: 0.5em auto 1em;
     background: var(--clr-light);
-    opacity: 0.25;
+    opacity: 0.5;
 }
 
 @media (min-width: 800px) {
@@ -331,6 +339,10 @@ header {
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .service {
+        margin: 0 auto;
     }
 
     .service + .service {
@@ -421,7 +433,7 @@ header {
 /* footer */
 
 .footer {
-    background: #111;
+    background: #222;
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
