@@ -15290,7 +15290,14 @@ const dictionary = [
     "shave",
   ]
 
+const alertContainer = document.querySelector('[data-alert-container')
 const guessGrid = document.querySelector('[data-guess-grid]')
+const WORD_LENGTH = 5
+const offsetFromDate = new Date(2022, 0, 1)
+const msOffset = Date.now() - offsetFromDate
+const dayOffset = msOffset/1000/86400
+const targetWord = targetWords[Math.floor(dayOffset)]
+
 
 startInteraction()
 
@@ -15331,7 +15338,7 @@ function handleKeyPress(e) {
         return
     }
 
-    if (e.key === 'Delete' || e.key === 'Delete') {
+    if (e.key === 'Delete' || e.key === 'Backspace') {
         deleteKey()
         return
     }
@@ -15343,8 +15350,58 @@ function handleKeyPress(e) {
 }
 
 function pressKey(key) {
+    const activeTiles = getActiveTiles()
+    if (activeTiles.length>= WORD_LENGTH) return;
     const nextTile = guessGrid.querySelector(':not([data-letter])')
     nextTile.dataset.letter = key.toLowerCase();
     nextTile.textContent = key
     nextTile.dataset.state = 'active'
+}
+
+function getActiveTiles() {
+    return guessGrid.querySelectorAll('[data-state="active"]')
+}
+
+
+function deleteKey() {
+    const activeTiles = getActiveTiles()
+    const lastTile = activeTiles[activeTiles.length-1]
+    if (lastTile == null) return
+    lastTile.textContent = ''
+    delete lastTile.dataset.state
+    delete lastTile.dataset.letter
+}
+
+function submitGuess() {
+    const activeTiles = [...getActiveTiles()]
+    if (activeTiles.length !== WORD_LENGTH) {
+        showAlert('Not enough letters')
+        shakeTiles(activeTiles)
+        return
+    }
+}
+
+function showAlert(message, duration = 1000) {
+    const alert = document.createElement('div')
+    alert.textContent = message
+    alert.classList.add('alert')
+    alertContainer.prepend(alert)
+    if (duration == null) return
+
+    setTimeout(()=> {
+        alert.classList.add('hide')
+        alert.addEventListener('transitionend', ()=> {
+            alert.remove()
+        })
+    }, duration)
+}
+
+
+function shakeTiles(tiles) {
+    tiles.forEach(tile => {
+        tile.classList.add('shake')
+        tile.addEventListener('animationend', ()=> {
+            tile.classList.remove('shake')
+        }, {once:true})
+    })
 }
