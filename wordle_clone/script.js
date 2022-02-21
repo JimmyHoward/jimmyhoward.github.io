@@ -15483,4 +15483,6 @@ function danceTiles(tiles) {
     })
 }
 
+// fix dance tiles not working
+// also fix stop interaction after winning
 

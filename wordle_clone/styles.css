@@ -1,7 +1,6 @@
 *, *::after, *::before {
     box-sizing: border-box;
     font-family: Arial;
-    border: 1px solid red;
 }
 
 body {
