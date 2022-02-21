@@ -15417,7 +15417,7 @@ function flipTile(tile, index, array, guess) {
             tile.dataset.state = 'wrong'
             key.classList.add('wrong')
         } 
-
+// pls debug ltr :(
         if (index === array.length - 1) {
             tile.addEventListener('transitionend', ()=> {
                 startInteraction()
