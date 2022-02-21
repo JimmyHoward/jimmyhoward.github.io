@@ -11,11 +11,9 @@ body {
     min-height: 100vh;
     margin: 0;
     font-size: clamp(.5rem, 2.5vmin, 1.5rem);
-    padding: 1rem;
+    padding: 1em;
     align-items: center;
 }
-
-
 
 .keyboard {
     display: grid;
@@ -76,8 +74,8 @@ body {
 .guess-grid {
     display: grid;
     justify-content: center;
-    align-items: center;
-    align-self: auto;
+    align-content: center; /* to align entire grid */
+    align-items: center; /* to align individual elements */
     flex-grow: 1;
     grid-template-columns: repeat(5, 4em);
     grid-template-rows: repeat(6, 4em);
@@ -108,7 +106,7 @@ body {
     background-color: hsl(240, 2%, 23%);
 }
 
-.tile[data-state="wrong-position"] {
+.tile[data-state="wrong-location"] {
     border: none;
     background-color: hsl(49, 51%, 47%);
 }

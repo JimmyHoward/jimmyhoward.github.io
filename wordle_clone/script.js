@@ -15296,10 +15296,12 @@ const keyboard = document.querySelector('[data-keyboard')
 const alertContainer = document.querySelector('[data-alert-container')
 const guessGrid = document.querySelector('[data-guess-grid]')
 const WORD_LENGTH = 5
-const offsetFromDate = new Date(2022, 0, 1)
-const msOffset = Date.now() - offsetFromDate
-const dayOffset = msOffset/1000/86400
-const targetWord = targetWords[Math.floor(dayOffset)]
+// const offsetFromDate = new Date(2022, 0, 1)
+// const msOffset = Date.now() - offsetFromDate
+// const dayOffset = msOffset/1000/86400
+// const targetWord = targetWords[Math.floor(dayOffset)]
+
+const targetWord = targetWords[Math.floor(Math.random() * targetWords.length)]// unlimited plays :D
 
 
 startInteraction()
@@ -15417,7 +15419,6 @@ function flipTile(tile, index, array, guess) {
             tile.dataset.state = 'wrong'
             key.classList.add('wrong')
         } 
-// pls debug ltr :(
         if (index === array.length - 1) {
             tile.addEventListener('transitionend', ()=> {
                 startInteraction()
@@ -15438,9 +15439,9 @@ function checkWinLose(guess, array) {
         return
     }
 
-    const remainingTiles = guessGrid.querySelectorAll(":not[data-letter]")
-    if (remainingTiles.length===0) {
-        showAlert(targetWord.toUpperCase()+ ", You Lose!", null)
+    const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])")
+    if (remainingTiles.length === 0) {
+        showAlert(targetWord.toUpperCase() + ", You Lose!", null)
         stopInteraction()
     }
 }
