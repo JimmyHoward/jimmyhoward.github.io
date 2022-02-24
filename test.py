@@ -66,7 +66,7 @@ class Planet:
         if other.sun:
             self.distance_to_sun = distance
 
-        force = self.G * self.mass * other.mass / distance**2
+        force = self.G * self.mass * other.mass / distance ** 2
         theta = math.atan2(distance_y, distance_x)
         force_x = math.cos(theta)*force
         force_y = math.sin(theta)*force
@@ -114,10 +114,10 @@ def main():
     jupiter = Planet(-1.8*Planet.AU,0,20,PINK, 3.3e27)
     jupiter.y_vel = 10000
 
-    planets = [sun, earth, mars, venus, mercury]
+    planets = [sun, earth, mars, venus, mercury, jupiter]
 
     while run:
-        clock.tick(120)
+        clock.tick(500) #sim speed
         WIN.fill((0,0,0))
         
 
