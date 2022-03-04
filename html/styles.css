@@ -118,6 +118,7 @@ h3 {font-size: var(--fs-h3)}
 .section__subtitle__intro,
 .section__subtitle__about {
     background: var(--clr-accent);
+    color: var(--clr-light);
     font-family: var(--ff-primary);
     padding: .25em 1em;
 }
@@ -418,6 +419,7 @@ header {
 }
 
 .portfolio__img {
+    min-width: inherit;
     transition: 
         transform 750ms cubic-bezier(.5,0,.5,1),
         opacity 250ms linear;
